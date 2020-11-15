@@ -7,7 +7,7 @@
 \usepackage{fontspec}
 \setmainfont{EB Garamond}
 \newfontfamily\FateCoreGlyphs[Mapping=tex-text]{Fate Core Glyphs} % dobókocka, cselekvés ikonok
-\newfontfamily\Wingdings[Mapping=tex-text]{Wingdings} % siker/kudarc ikonok
+\newfontfamily\Wingdings[Mapping=tex-text]{Wingdings3} % siker/kudarc ikonok
 \newfontfamily\Roboto[Mapping=tex-text]{Roboto Light} % példák (Gotham Condensed helyett)
 \newfontfamily\RobotoMedium[Mapping=tex-text]{Roboto Medium} % táblázatok (Gotham Condensed helyett)
 \newfontfamily\RobotoCondensed[Mapping=tex-text]{Roboto Condensed Bold} % címek (Gotham Condensed helyett)
@@ -28,6 +28,7 @@
 \usepackage[table]{xcolor}
 \usepackage{multicol}
 \usepackage{amsmath}
+\usepackage{lettrine}
 
 \title{Fate Condensed Magyarul}
 \author{NoiseEHC}
@@ -46,6 +47,7 @@
 
 \DeclareTextFontCommand{\dice}{\FateCoreGlyphs}
 \DeclareTextFontCommand{\examplefont}{\Roboto}
+\DeclareTextFontCommand{\outcome}{\Wingdings}
 
 \newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
 \newcommand{\fate}[1]{\textbf{\textit{#1}}}
@@ -57,10 +59,23 @@
 
 \newcommand{\vcenteredinclude}[1]{\begingroup\setbox0=\hbox{\includegraphics[height=12pt]{#1}}\parbox{\wd0}{\box0}\endgroup}
 
+% Ezek a számok itt nem UNICODE értékek, hanem a karakter sorszáma a karakterkészletben!!!
+\newcommand{\failure}{\outcome{\XeTeXglyph7}}
+\newcommand{\tie}{\outcome{\XeTeXglyph39}}
+\newcommand{\success}{\outcome{\XeTeXglyph6}}
+\newcommand{\successwithstyle}{\outcome{\XeTeXglyph45}}
+\newcommand{\failureitem}{\item[\failure]}
+\newcommand{\tieitem}{\item[\tie]}
+\newcommand{\successitem}{\item[\success]}
+\newcommand{\successwithstyleitem}{\item[\successwithstyle]}
+
+\newcommand\outcomesection[2]{\subsection{#1\vspace*{-12pt}\\ {\small#2}}}
+\newcommand\actionsection[2]{\subsection{#1\vspace*{-12pt}\\ {\small#2}}}
+
 \newcommand{\fatetable}[2]{
 \begin{center}
 \RobotoMedium{
-\rowcolors{2}{white}{lightgray!20}
+\rowcolors{2}{lightgray!40}{white}
 \begin{tabular}{ |#1| }
 \hline
 \rowcolor{black}
@@ -85,6 +100,7 @@
 \titlespacing{\subsubsection}{0pt}{0pt}{0pt}[0pt]
 
 \include{Introduction}
+
 \include{GettingStarted}
 \include{Skills}
 \include{SkillList}
@@ -92,142 +108,10 @@
 \include{Refresh}
 \include{WritingStunts}
 \include{StressAndConsequences}
-\chapter{Cselekedni és kockákkal dobni}
-A \fate{Fate Condensed} játékban te irányítod a karaktered cselekedeteit, miközben hozzáteszel a közösen mesélt történethez. Általában a KM meséli, hogy a világban mi történik, és hogy a Nem Játékos Karakterek (NJK‑k) mit csinálnak, míg a játékosok a saját karaktereik cselekedeteit mondják el.
-Bármit szeretnél csinálni, kövesd az előbb az elképzelés szabályt: először mondd ki, hogy a karaktered mire készül, és csak utána gondolkodj azon, hogy a rendszerben ezt hogyan lehet modellezni. A karaktered jellemzői megmutatják, hogy mivel próbálkozhat egyáltalán, és segítenek megállapítani az eredmény értelmezésének kereteit. A legtöbb ember meg sem próbálkozhat megműteni a kibelezett társát, de ha van egy jellemződ, ami orvosi háttérről árulkodik, akkor te viszont nekiláthatsz. Enélkül a jellemző nélkül a legtöbb, hogy nyerhetsz pár percet a végső szavakhoz. Ha kétségesnek érzed, kérdezd meg a KM‑et és az asztaltársaságot.
-Hogyan állapítod meg, hogy eredményes voltál‑e? Gyakran a karaktered egyszerűen csak megteszi, amit akartál, mert a cselekedet nem túl nehéz, és senki sem próbált meggátolni benne. De problémás és kiszámíthatatlan szituációkban muszáj elővenni a kockákat, hogy eldöntsék, mi történik.
-Ha egy karakter cselekedne, az alábbiakat kell figyelembe venni:
-    • Mi gátolja abban, hogy egyszerűen csak megtegye?
-    • Mi mehet félre?
-    • Miért érdekes, ha valami félresikerül?
-Ha senkinek sincs megfelelő válasza az összes kérdésre, akkor a cselekedet egyszerűen megtörténik. Elvezetni a repülőtérre tényleg nem kíván kockadobálást. Viszont az autópályán versenyezni a ránk várakozó repülőig, miközben másik világról származó, kibernetikával turbózott vadállatok üldöznek, tökéletes alkalom a dobásra.
-Ha cselekedni kívánsz, kövesd az alábbi lépéseket:
-    1. Előbb az elképzelés: írd le, mit akarsz megtenni, és utána válassz képességet és cselekvést.
-    2. Dobj négy kockával.
-    3. Add össze a szimbólumokat a kockákon: a + értéke +1, a - értéke -1, míg a 0 értéke 0.
-Ez -4 és +4 közötti eredményt fog adni.
-    4. Add a kockák eredményét a képesség szintjéhez.
-    5. Módosíthatod a dobást jellemzők kihasználásával és fortélyok használatával.
-    6. Állapítsd meg a végső eredményt, aminek a neve erőfeszítés.
-Nehézség és ellenállás
-Ha a karakter tettét valamilyen probléma akadályozza, vagy pedig egy másik karakter vagy lény helyett csak a világra próbál hatni, akkor a cselekvésének passzív nehézséget kell legyűrnie. Ilyen például a zártörés, ajtók eltorlaszolása vagy felmérni az ellenség táborát. A KM változtathat a nehézségen, ha ezt bizonyos jellemzők (legyenek azok a karakteren, a jeleneten vagy máshol) indokolják.
-Más esetekben, az ellenfél aktív ellenállást tanúsít a karakter cselekvésével szemben egy védekezés cselekvést használva. Ezekben az esetekben a KM szintén dob, ugyanazokat a lépéseket követve az előző fejezetből, miközben az ellenfél képességeit, fortélyait és jellemzőit használja. Ha megtámadásra vagy az ellenfelet közvetlenül érintő helyzetbehozásra dobsz, az ellenfél védekezésre fog dobni ellene.
-Az ellenállásnak számtalan formája létezik. Ha egy szektataggal a rituális áldozótőrért küzdesz, akkor az ellenfél jól definiált. De lehetséges, hogy egy ősi rituálé erejével kell megküzdened, hogy meg tudd menteni a világot. Feltörni egy széfet a First Metropolitan Bank páncéltermében a felfedezés kockázatát hordozza, de az a KM döntése, hogy a járőröző őrség aktív ellenállása ellen dobsz, vagy pedig csak a széftől függő passzív nehézség ellen.
-A dobás módosítása
-Kihasználhatsz egy jellemzőt, hogy +2 bónuszt kapjál a dobásra, vagy pedig újra dobhass. Néhány fortély szintén bónuszokat adhat. A jellemzők kihasználásával egy szövetségesedet is támogathatod (32. oldal), vagy az ellenfél dobásának nehézségét is megnövelheted.
-Jellemzők kihasználása
-Ha csinálsz valamit, de a kockák eredménye nem elégséges, nem kell feladnod, és elfogadni a vereséget. (Bár nyilvánvalóan megteheted. Az is lehet mókás.) A használható jellemzők opciókat és lehetőségeket biztosítanak ahhoz, hogy elérd a célod.
-Ha meg tudod indokolni, hogy egy jellemző hogyan segíthet a fáradozásaidban, fogalmazd meg, hogyan segít, és költs el egy sors pontot a kihasználásához (vagy használj el egy ingyen kihasználást). Hogy mi indokolható meg, és mi nem, annak eldöntésére a fals szabály szolgál – bárki megvétózhatja, ha kijelenti, hogy „Ez fals!”. Egyszerűen fogalmazva, a fals szabály kalibrációs technika, amit minden jelenlévő használhat, ha úgy érzi, hogy a játék eltávolodott a megcélzott víziótól vagy koncepciótól. Hasonló technikákról, amik a biztonságos játékkörnyezet kialakítását célozzák, később olvashatsz.
-Ha a kihasználásod falsnak bizonyul, két lehetőséged van. Először is, visszavonhatod a kihasználást, és próbálkozhatsz mással, például egy másik jellemzővel. Másodszor, megvitathatod, hogy a jellemző miért is megfelelő. Ha ez nem győzi meg a másikat, akkor vond vissza a kihasználást, és nyugodj bele. Ha magáévá teszi a perspektívádat, akkor viszont csinálhatod a kihasználást, ahogy tervezted. A fals szabály arra szolgál, hogy az asztal mellett töltött idő kellemesen teljen. Akkor használd, ha valami nem hangzik túl jól, nincs sok értelme, vagy nem illik a megcélzott hangulatba. Ha valaki kihasználná a Nagyszerű Első Benyomás képességét, hogy eldobjon egy autót, az valószínűleg fals. De lehetséges, hogy van a karakternek valamilyen természetfeletti jellemzője, ami elképzelhetetlenül erőssé teszi, elég erőssé, hogy eldobjon egy autót, és ez a belépő egy rettentő szörnyeteg elleni harcban. Ez esetben a Nagyszerű Első Benyomás teljes mértékben hihető.
-Amikor kihasználsz egy jellemzőt, vagy +2 bónuszt kapsz az erőfeszítésre, vagy újradobhatod mind a négy kockát, vagy pedig 2‑vel emelheted a nehézséget valaki más dobásánál, ha ez megmagyarázható. Több jellemzőt is kihasználhatsz ugyanahhoz a dobáshoz, de nem lehet kihasználni ugyanazt a jellemzőt többször ugyanahhoz a dobáshoz. Az egyetlen kivétel: tetszőleges számú ingyen kihasználásod elhasználhatod ugyanazzal a jellemzővel ugyanahhoz a dobáshoz.
-Kihasználni legtöbbször a saját karaktered jellemzőit fogod. De kihasználhatsz helyzet jellemzőket is, sőt, lehetőség van más karakter jellemzőinek ellenséges kihasználására is (24. oldal).
-Fortélyok használata
-A fortélyok bónuszt adhatnak a dobásra, feltéve, hogy teljesíted a fortély leírásában megfogalmazott feltételt, például a megfelelő körülményeket, a használt cselekvést vagy képességet. Használhatod a helyzetbehozás cselekvést is, hogy olyan jellemzőket hozzál létre, amik megteremtik a fortélyhoz szükséges körülményeket. Végül, vedd figyelembe a fortély szükséges körülményeit a karaktered cselekedeteinek leírásakor is, hogy ennyivel is könnyebb legyen a feltételeket teljesítened.
-Normális esetben a fortély +2 bónuszt ad, egy bizonyos, szűken definiált szituációban, bármiféle költség nélkül; bármikor használhatod, amikor csak lehetséges. Ellenben, néhány ritka és kivételesen hatalmas fortélyhoz lehet, hogy el kell költened egy sors pontot a használathoz.
-Kimenetelek
-Minden dobás után az erőfeszítés, valamint a passzív nehézség vagy aktív ellenállás közötti különbséget a sikerességnek hívjuk. Négyféle lehetséges kimenetel létezik:
-    • Ha az erőfeszítés kisebb, mint a megcélzott nehézség vagy ellenállás, akkor kudarc.
-    • Ha az erőfeszítés egyenlő a céllal, akkor döntetlen.
-    • Ha az erőfeszítés egy vagy kettő sikerességgel nagyobb, mint a cél, akkor siker.
-    • Ha az erőfeszítés legalább három sikerességgel nagyobb, mint a cél, akkor átütő siker.
-Némelyik kimenetel nyilvánvalóan jobban esik, mint mások, de valamilyen érdekes módon mindegyiküknek előre kell mozdítani a történetet. Az előbb az elképzelés szabállyal kezdted (13. oldal), hát fejezd is be vele, hogy a történet maradjon a játék fókusza, és hogy a kimenetel értelmezése megfeleljen az elképzelésnek.
-Ethan nem valami ügyes mackós (bár megvannak hozzá a szerszámai), de mégis ott találjuk a vészjósló kultusz titkos főhadiszállásán, és már csak egy páncélajtó választja el a keresett rituálé kötettől. Át tud‑e jutni rajta?
-Kudarc
-Ha az erőfeszítés kisebb, mint a megcélzott nehézség vagy ellenállás, akkor kudarcot vallasz.
-Ezt többféleképpen is ki lehet játszani: egyszerűen kudarc, siker komoly áron, vagy elszenvedni egy találatot.
-Egyszerű kudarc
-Az elsőt a legegyszerűbb megérteni – egyszerűen kudarc. Nem éred el a célod, nem haladsz előre, nem kapsz semmit sem. Ez viszont mindenképpen mozdítsa előre a történetet – ha a széfet egyszerűen csak nem tudod kinyitni, az sehová sem vezet, és unalmas is.
-Ethan diadalmasan meghúzta a kart, de a széf határozottan zárva maradt, ellenben a szirénák felharsantak. A kudarc megváltoztatta a szituációt, és előremozdította a történetet – az őrök már a helyszínre tartanak. Ethannek egy újabb dilemmával kell szembenéznie – most, hogy a finom módszerek sikertelennek bizonyultak, próbálja más módon kinyitni a széfet, vagy hagyja a fenébe, és tűnés?
-Siker komoly áron
-A második a siker komoly áron. Megteszed, amit akartál, de komoly árat kell fizetni érte – a szituáció rosszabbodott, de legalábbis komplikációk léptek fel. Mint KM, egyszerűen kijelentheted, hogy ez lett a kimenetel, vagy pedig felajánlhatod a játékosnak, mint opciót a kudarc helyett. Mindkét variáns jó és hasznos lehet a megfelelő szituációban.
-Ethan elrontja a dobását, és a KM így szól: „Hallod, ahogy az utolsó retesz a helyére kattan. Ez a hang szinte visszhangzik egy felhúzott revolver kattanásában, ahogy az őr megkér, hogy fel a kezekkel.” A komoly ár itt a konfrontáció az őrrel, amit a karaktere megpróbált elkerülni.
-Elszenvedni egy találatot
-Végül, elszenvedhetsz egy találatot, amit vagy stressz dobozokkal vagy következményekkel kell semlegesítened, vagy valami más hátrányban részesülhetsz. Ilyen kudarc a leggyakrabban megtámadás elleni védekezés közben fordul elő, vagy ha a karakter megoldana veszélyes problémákat. Annyiban különbözik az egyszerű kudarctól, hogy egyedül a karaktert érinti, nem az egész csapatot. A siker komoly áron annyiban más, hogy itt a siker nem feltétlenül lehetséges.
-Ethan kinyitja a széfet, de ahogy megfogja a fogantyút, egy szúrást érez a kézfején. Nem hatástalanította a csapdát! Beírja, hogy Megmérgezett az enyhe következmény rubrikába.
-Ezeket a lehetőségeket keverni is lehet. Az ártalmas kudarc kicsit durvának tűnhet, de lehet, hogy a legjobb választás abban a pillanatban. Vagy a siker találat árán is egy opció.
-Döntetlen
-Ha az erőfeszítés egyenlő a megcélzott nehézséggel vagy ellenállással, az döntetlen.
-A kudarchoz hasonlóan a döntetlennek is előre kell mozdítania a történetet, sosem akadályozhatja az akciót. Muszáj valami érdekesnek történnie. Ugyanúgy, ahogy a kudarc esetén, ezt is többféleképpen ki lehet játszani: siker kisebb áron vagy részleges siker.
-Siker kisebb áron
-Az első a siker kisebb áron – pár doboznyi stressz, valamiféle kényelmetlenség vagy hátráltatás a történetben, amik azért magukban nem akadályoznak, netán egy előny jellemző az ellenfélnek mind‑mind kisebb árnak számítanak.
-Ethan kezdeti próbálkozásai mind hibásnak bizonyulnak. Mire kinyitja a széfet, már hajnal hasadt, így szóba se jöhet, hogy az éj leple alatt tűnjön el. Megszerezte, amiért jött, de a szituáció már kellemetlenebb.
-Részleges siker
-A döntetlen kezelésének másik módja a részleges siker – ez siker, de csak egy részét tudtad elérni a célodnak.
-Ethan éppen csak résnyire tudja kinyitni a páncélajtót – ha csak egy ujjnyival megmozdítaná, a riasztás megszólalna, és fogalma sincs, hogyan tudná hatástalanítani. Pár oldalnyit a rituáléból ki tud húzni a résen át, de csak találgathat a befejező lépésekről.
-Siker
-Ha az erőfeszítés eggyel vagy kettővel nagyobb a célnál, az siker.
-Megszerzed, amit akarsz, bármiféle extra fizetség nélkül.
-Kinyílt! Ethan felmarkolja a rituálé szövegét, és elillan, mielőtt az őrök felfedezhetnék.
-Az "előbb az elképzelés" hatása a sikerre
-Az elképzelés mondja meg, hogy pontosan hogyan is néz ki a siker. Mi van, ha Ethannek nincsenek szerszámai, vagy nem elég képzett, hogy feltörje a széfet? Ilyenkor lehetséges, hogy a siker inkább „kisebb áron” fog történni. Hasonlóan, ha Ethan azért volt a betörő csapatban, mert ő építette a széfet, akkor a siker eléggé „átütő” lesz.
-Átütő siker
-Ha az erőfeszítés legalább hárommal nagyobb a célnál, az átütő siker.
-Megszerzed, amit akarsz, és még egy kicsit többet is.
-Ethan több mint szerencsés; a széf ajtaja szinte rögtön kinyílik. Nem csak, hogy megszerzi a rituálé szövegét, de elég ideje van átfutni a széfben lévő többi dokumentumot is. Mindenféle váltók és szerződések között rábukkan az Akeley kastély tervrajzára.
-Cselekvések
-Négyféle cselekvés van, amire dobhatsz, mindegyik egyedi céllal rendelkezik, és egyedi a hatása is a történetre:
-    • Megold egy problémát, hogy leküzdjön egy akadályt a képességeivel.
-    • Helyzetbehozás, hogy előnyösebbé változtassa a körülményeket.
-    • Megtámadás, ami az ellenfélnek kárt okoz.
-    • Védekezés, hogy megússzon egy megtámadást, megállítsa az ellenfelek helyzetbehozását, vagy szembeszegüljön egy probléma megoldásának.
-Megoldás
-Megold egy problémát, hogy legyőzzön egy akadályt a képességeivel.
-Minden karakter számtalan kihívással szembesül a történetben. A megold cselekvéssel tudnak szembeszegülni, és legyőzni ezeket az akadályokat.
-Egy karakter, akinek magas az Ügyessége, fel tud mászni a falakon, vagy a zsúfolt utcákon rohanni. Egy detektív magas Nyomozással olyan nyomokat is értelmezhet, ami felett mások átsiklottak. Ha valaki képzett Befolyásolásban, sokkal könnyebben elkerülheti a verekedést egy ellenséges bárban.
-A megoldás kimenetelei:
-    • Ha kudarc, beszéld meg a KM‑el (és a védekező játékossal, ha van ilyen), hogy ez egyszerű kudarc, netán siker komoly áron.
-    • Ha döntetlen, akkor ez egy siker kisebb áron – kellemetlen szituációba kerülsz, az ellenfél kap egy előny jellemzőt, vagy elszenvedsz egy találatot. Alternatíva, ha kudarcot vallasz, de kapsz egy előnyt.
-    • Ha siker, akkor eléred a célod, és a történet megy tovább, bármiféle bukkanó nélkül.
-    • Ha átütő siker, akkor nem csak, hogy siker, de kapsz egy előnyt is.
-Charles eljutott az Antarktiszra a kutató létesítményhez. Az épületek romokban, és a lakók sehol. Át akarja kutatni a törmeléket nyomok reményében. A KM azt mondja, hogy dobjon Nyomozásra Jó~(+2) nehézség ellen. Charles dobása 00++ a kockákon, plusz a Nyomozása Átlagos~(+1), az erőfeszítés így Remek~(+3). Ez siker! A KM leírja a nyomokat: lábnyomok a hóban, olyan lényeké, amik sok vékony, nem emberi lábakon lépkednek.
-Gyakran használjuk a megold cselekvést, ha el kell dönteni, hogy a karakter hozzáfér‑e, vagy észrevesz‑e egy bizonyos tényt vagy nyomot. Ha így van, tartsd észben, hogy létezik a siker valamilyen áron lehetőség is. Ha megakasztaná a történetet, hogy ha egy részlet felett elsiklanának a játékosok, akkor legjobb ezt a lehetőséget teljesen kizárni, és csak az árra fókuszálni.
-Helyzetbehozás
-Létrehoz egy új helyzet jellemzőt, vagy a maga javára fordít egy már meglévő jellemzőt.
-A helyzetbehozás cselekvéssel a történet folyását tudod megváltoztatni. A képességeiddel új jellemzőket behozva, vagy meglévő jellemzőkhöz kihasználásokat adva, magad és a csapattársaid felé billentheted a mérleg nyelvét. Megváltoztathatod a körülményeket (eltorlaszolni egy ajtót vagy előkészülni egy tervvel, aminek a végrehajtására jár ingyen kihasználás), új információkat fedezhetsz fel (kikutatni egy szörny gyenge pontját), vagy felhasználhatsz valami köztudottat (például a CEO kedvenc whisky márkáját).
-A helyzetbehozással létrehozott jellemző ugyanúgy működik, mint bármelyik másik: lefekteti a történet körülményeit, ami lehetővé teheti, megakadályozhatja, vagy csak gátolhatja bizonyos cselekedetek végrehajtását – például nem lehet egy varázslatot elolvasni, ha a szoba Töksötét. Ugyanúgy lehet kihasználni, és ugyanúgy késztethet. Ezen felül egy helyzet jellemző létrehozásakor kapsz hozzá egy vagy több ingyen kihasználást is. Az ingyen kihasználás, ahogy azt a neve is mutatja, ingyenes, nem kell érte sors pontot fizetni. Akár még a szövetségeseidnek is átengedheted az ingyen kihasználást.
-Ha helyzetbehozásra dobsz, el kell döntened, hogy új jellemzőt hozol létre, vagy egy már meglévőnek szeretnéd hasznát venni. Ha az előbbi, akkor ezt a jellemzőt egy szövetségeshez, ellenséghez vagy a környezethez szeretnéd csatolni? Ha egy ellenségre, akkor az védekezés cselekvést tehet ellene. Egyéb esetekben általában egy nehézség ellen kell ilyenkor dobni, de a KM dönthet úgy is, hogy valaki megpróbál meggátolni, és akkor az védekezés dobás lesz.
-A kimenetelek új jellemző létrehozásánál:
-    • Ha kudarc, akkor nem tudod létrehozni a jellemzőt (egyszerű kudarc), vagy létrejön, de az ellenfél kapja az ingyen kihasználást (siker komoly áron). Ez utóbbi esetben a jellemzőt lehet, hogy át kell fogalmazni, hogy az ellenfelet segítse. Még így is megérheti, mert a jellemző mindig igaz.
-    • Ha döntetlen, akkor nem tudod létrehozni a jellemzőt, de helyette kapsz egy előnyt (23. oldal).
-    • Ha siker, akkor létrehozod a jellemzőt, és kapsz egy ingyen kihasználást.
-    • Ha átütő siker, akkor létrehozod a jellemzőt, és kapsz két ingyen kihasználást.
-A kimenetelek meglévő, ismert vagy ismeretlen jellemző esetén:
-    • Ha kudarc, és a jellemző ismert volt, akkor az ellenfél kap egy ingyen kihasználást a jellemzőhöz. Ha ismeretlen volt, akkor felfedhetik egy ingyen kihasználásért cserébe.
-    • Ha döntetlen, kapsz egy előnyt, ha a jellemző ismeretlen volt; és ismeretlen is marad. Ha a jellemző ismert volt, akkor ehelyett kapsz egy ingyen kihasználást hozzá.
-    • Ha siker, akkor kapsz egy ingyen kihasználást a jellemzőhöz, felfedve, ha addig ismeretlen volt.
-    • Ha átütő siker, két ingyen kihasználást kapsz a jellemzőhöz, felfedve, ha addig ismeretlen volt.
-Ethan szembekerül egy shoggothal, ami egy masszív, fáradhatatlan húshegy. Tisztában van vele, hogy ez túl hatalmas szörny egy direkt megtámadáshoz, ezért úgy dönt, hogy inkább elvonja a figyelmét: „Készítek egy Molotov koktélt, és lángba borítom” – mondja.
-A KM úgy dönt, hogy a shoggothot triviális eltalálni, ezért ez egy Ezermester dobás lesz – milyen gyorsan tud találni valami gyúlékonyat, amit fegyverré alakíthat. A nehézség Remek~(+3). Ethan Ezermester képessége Átlagos~(+1), a dobása 0+++, így az erőfeszítés Kimagasló~(+4).
-Ethan összeüt egy Molotov koktélt, és a szörnyre hajítja. A shoggoth így Lángol, és Ethannek van egy ingyen kihasználása ehhez a jellemzőhöz. Ez láthatóan elvonta a shoggoth figyelmét, így ha üldözni kezdi, Ethan kihasználhatja a jellemzőt, hogy egérutat nyerjen.
-Megtámadás
-Megtámadja az ellenfelet, hogy kárt okozzon neki.
-A megtámadás cselekvéssel lehet megpróbálni kiejteni az ellenfelet – legyen szó egy undorító szörnyeteg levágásáról, vagy csak egy ártatlan őr kupán vágásáról, aki még csak azt sem tudja, hogy mit őriz. Egy megtámadás lehet egy géppuska ellenfélre ürítése, egy kemény jobb egyenes, netán egy káros varázslat.
-Vedd figyelembe, hogy egyáltalán lehetséges‑e sérülést okozni a célpontnak. Nem minden megtámadás hasonló nagyságrendű, egy kaiju valószínűleg meg sem érezné, ha behúznál neki egyet. Döntsd el, hogy a megtámadásnak egyáltalán van‑e reális esélye a károkozásra, mielőtt nekiállnál dobni. Vannak olyan hatalmas lények, amiknek valamilyen gyengeségét kell kiaknázni, vagy a védelmüket kell valahogy megkerülni, mielőtt bármiféle kárt tudnál tenni bennük.
-A kimenetelek megtámadás esetén:
-    • Ha kudarc, akkor nem tudod eltalálni – a támadást kivédték, elmozdultak előle, vagy csak felfogta a páncél.
-    • Ha döntetlen, akkor éppen csak súrolod, vagy talán az ellenfél meghátrált. Akárhogyan is, de kapsz egy előnyt.
-    • Ha siker, akkor a sikerességgel megegyező nagyságú sérülést okozol. A védekező félnek ezt kell stressz dobozokkal vagy következmény jellemzőkkel semlegesítenie, vagy kiejtődik.
-    • Ha átütő siker, akkor ugyanúgy sérülést okozol, mint siker esetében, de választhatod, hogy eggyel kisebb sikerességért, egy extra előnyt is kapsz.
-Ruth belebotlik egy csontvázba, amit misztikus erők állítottak valami sötét dolog szolgálatába. Úgy dönt, hogy orrba vágja. A Közelharc képessége Kimagasló~(+4), de a dobása --00, így az erőfeszítés csak Jó~(+2).
-Védekezés
-Védekezik, hogy megússzon egy megtámadást, vagy meggátolja valaki más cselekvését.
-Egy szörny próbál szétmarcangolni? Egy ellenfél próbál félretaszítani, a haragod elől menekülve? Mit teszel, ha egy szektatag próbálja mindkét veséd szétszurkálni? Védekezés, védekezés, védekezés.
-A védekezés az egyetlen reakció cselekvés a \fate{Fate Condensed} játékban. A védekezéssel meggátolhatsz valamit, még ha nem is te jössz, így passzív nehézség helyett, gyakran aktív ellenállás dobás lesz. Az ellenséged dob, és rögtön ezután lehetőséged van dobni, ha te vagy a célpont, vagy pedig indokolható, hogy miként tudsz közbeavatkozni (ami gyakran téged tesz célponttá). Néhány jellemző vagy fortély adhat is indoklást.
-A kimenetelek védekezés esetén:
-    • Ha kudarc megtámadás ellen, akkor elszenveded a találatot, amit köteles vagy stressz dobozokkal vagy következmény jellemzőkkel semlegesíteni (35. oldal). Más esetben az ellenfeled sikeres abban, amit eltervezett.
-    • Ha döntetlen, az ellenfeled cselekvésének a döntetlen kimenetele adja meg, mit kell tenni.
-    • Ha siker, akkor nem szenveded el a találatot, vagy meggátolod az ellenfelet a tervében.
-    • Ha átütő siker, akkor nem szenveded el a találatot, vagy meggátolod az ellenfelet a tervében, és egy előnyt is kapsz, mert pillanatnyilag felülkerekedtél rajta.
-Az előbbi példát folytatva, a csontváz védekezhet Ruth ellen. A KM dobása -00+, ami nem módosítja a lény Középszerű~(+0) Ügyességét.
-Mivel Ruth erőfeszítése a magasabb, a támadása siker. A sikeresség kettő, és a csontváz egy kicsit közelebb került ahhoz, hogy ne keljen fel megint. Ha a csontváz jobbat dobott volna, akkor a védekezése siker lehetett volna, és az élőhalott szörnyűség elkerülhette volna a találatot.
-Mely képességekkel lehet megtámadni és védekezni?
-Az alapértelmezett képesség lista az alábbi elveket követi:
-    • Közelharc és Célzás alkalmas fizikai megtámadásra.
-    • Ügyességgel bármilyen fizikai megtámadás ellen lehet védekezni.
-    • Közelharccal csak Közelharci megtámadás ellen lehet védekezni.
-    • Kényszerítés alkalmas szellemi megtámadásra.
-    • Akaraterővel lehet szellemi megtámadás ellen védekezni.
-Speciális körülmények között, más képességeket is lehet megtámadásra vagy védekezésre használni, ha a KM engedélyezi, vagy konszenzus alakul ki a játékosok között. Némelyik fortély adhat szélesebb körű, garantált engedélyt akkor is, amikor a körülmények nem lennének alkalmasak. Ha egy képesség nem használható direkt megtámadásra vagy védekezésre, de hasznos lehet a szituációban, akkor használd a helyzetbehozás cselekvést, és használd el az ingyen kihasználásokat a következő megtámadás vagy védekezés dobásodhoz.
+
+\include{TakingAction}
+\include{DifficultyAndOpposition}
+\include{Actions}
 
 \chapter{Jellemzők és sors pontok}
 A jellemző az egy szó, kifejezés vagy mondás, ami valami egyedit mond egy személyről, helyről, tárgyról, szituációról vagy csoportról. Majdnem minden elképzelhető dolognak lehet jellemzőket adni. Egy embernek lehet a hírneve, hogy ő a Legjobb Céllövő a Vadnyugaton (később többet is megtudhatsz hasonló jellemzőkről). Egy szoba lehet Lángokban, miután fellöktél egy olajlámpást. Egy szörnnyel történt összecsapás után lehetsz Rémült. A jellemzőkkel terelheted a történetet olyan irányba, ahol jobban illeszkedik a karaktered hajlamaihoz, képességeihez vagy problémáihoz.
