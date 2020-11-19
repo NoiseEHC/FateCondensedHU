@@ -1,0 +1,127 @@
+\select@language {magyar} \contentsline {chapter}{\numberline {1}Bevezető}{3}{chapter.1}%
+\select@language {magyar} \contentsline {section}{\numberline {1.1}Mire van szükséged a játékhoz?}{3}{section.1.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.1.1}Veteránoknak: változások a Fate~Core"~hoz képest}{3}{subsection.1.1.1}%
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Alapok}{4}{chapter.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.1}A világ kidolgozása}{4}{section.2.1}%
+\select@language {magyar} \contentsline {section}{\numberline {2.2}Karakterkészítés}{4}{section.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}Ki vagy valójában?}{4}{subsection.2.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}Jellemzők}{4}{subsection.2.2.2}%
+\select@language {magyar} \contentsline {subsubsection}{Koncepció jellemző (High Concept)}{5}{subsection.2.2.2}%
+\select@language {magyar} \contentsline {subsubsection}{Árnyoldal jellemző (Trouble)}{5}{subsection.2.2.2}%
+\select@language {magyar} \contentsline {subsubsection}{Kapcsolat jellemző (Relationship)}{5}{subsection.2.2.2}%
+\select@language {magyar} \contentsline {subsubsection}{Szabadon választott jellemzők}{5}{subsection.2.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.3}Képességek}{6}{subsection.2.2.3}%
+\select@language {magyar} \contentsline {subsubsection}{Képesség szintek skálája}{6}{subsection.2.2.3}%
+\select@language {magyar} \contentsline {subsubsection}{Képesség lista}{7}{subsection.2.2.3}%
+\select@language {magyar} \contentsline {subsubsection}{Alternatív képesség Listák}{9}{subsection.2.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.4}Újratöltés}{10}{subsection.2.2.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.5}Fortélyok}{10}{subsection.2.2.5}%
+\select@language {magyar} \contentsline {subsubsection}{Fortélyok megtervezése}{11}{subsection.2.2.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.6}Stressz dobozok és következmény rubrikák}{12}{subsection.2.2.6}%
+\select@language {magyar} \contentsline {subsubsection}{Várjunk csak, nem erre emlékszem!}{12}{subsection.2.2.6}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.7}Végső simítások}{12}{subsection.2.2.7}%
+\select@language {magyar} \contentsline {chapter}{\numberline {3}Cselekedni és kockákkal dobni}{13}{chapter.3}%
+\select@language {magyar} \contentsline {section}{\numberline {3.1}Nehézség és ellenállás}{14}{section.3.1}%
+\select@language {magyar} \contentsline {section}{\numberline {3.2}A dobás módosítása}{14}{section.3.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.1}Jellemzők kihasználása}{14}{subsection.3.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.2}Fortélyok használata}{15}{subsection.3.2.2}%
+\select@language {magyar} \contentsline {section}{\numberline {3.3}Kimenetelek}{15}{section.3.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.1}Kudarc}{16}{subsection.3.3.1}%
+\select@language {magyar} \contentsline {subsubsection}{Egyszerű kudarc}{16}{subsection.3.3.1}%
+\select@language {magyar} \contentsline {subsubsection}{Siker komoly áron}{16}{subsection.3.3.1}%
+\select@language {magyar} \contentsline {subsubsection}{Elszenvedni egy találatot}{16}{subsection.3.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.2}Döntetlen}{17}{subsection.3.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{Siker kisebb áron}{17}{subsection.3.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{Részleges siker}{17}{subsection.3.3.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.3}Siker}{17}{subsection.3.3.3}%
+\select@language {magyar} \contentsline {subsubsection}{Az „előbb az elképzelés” hatása a sikerre}{17}{subsection.3.3.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.4}Átütő siker}{17}{subsection.3.3.4}%
+\select@language {magyar} \contentsline {section}{\numberline {3.4}Cselekvések}{18}{section.3.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.1}Megoldás}{18}{subsection.3.4.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.2}Helyzetbehozás}{19}{subsection.3.4.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.3}Megtámadás}{20}{subsection.3.4.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.4}Védekezés}{21}{subsection.3.4.4}%
+\select@language {magyar} \contentsline {subsubsection}{Mely képességekkel lehet megtámadni és védekezni?}{21}{subsection.3.4.4}%
+\select@language {magyar} \contentsline {chapter}{\numberline {4}Jellemzők és sors pontok}{22}{chapter.4}%
+\select@language {magyar} \contentsline {section}{\numberline {4.1}A jellemző mindig igaz}{22}{section.4.1}%
+\select@language {magyar} \contentsline {section}{\numberline {4.2}Milyen jellemző típusok léteznek?}{23}{section.4.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.1}Karakter jellemzők}{23}{subsection.4.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.2}Helyzet jellemzők}{23}{subsection.4.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.3}Következmény jellemzők}{23}{subsection.4.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.4}Előny jellemzők}{23}{subsection.4.2.4}%
+\select@language {magyar} \contentsline {section}{\numberline {4.3}Mit tehetek jellemzőkkel?}{24}{section.4.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.1}Sors pontok szerzése}{24}{subsection.4.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.2}Kihasználás}{24}{subsection.4.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{A szókihagyásos trükk}{24}{subsection.4.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{Ellenséges kihasználás}{24}{subsection.4.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{Történet részleteinek kinyilvánítása kihasználással}{24}{subsection.4.3.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.3}Késztetés}{25}{subsection.4.3.3}%
+\select@language {magyar} \contentsline {subsubsection}{A késztetések komplikációk, nem akadályok}{25}{subsection.4.3.3}%
+\select@language {magyar} \contentsline {subsubsection}{Események és döntések}{26}{subsection.4.3.3}%
+\select@language {magyar} \contentsline {subsubsection}{Ellenséges kihasználás vagy késztetés?}{26}{subsection.4.3.3}%
+\select@language {magyar} \contentsline {section}{\numberline {4.4}Jellemzők létrehozása és megszüntetése}{27}{section.4.4}%
+\select@language {magyar} \contentsline {section}{\numberline {4.5}Egyéb jellemző fajták}{27}{section.4.5}%
+\select@language {magyar} \contentsline {chapter}{\numberline {5}Kihívás, konfliktus és versengés}{28}{chapter.5}%
+\select@language {magyar} \contentsline {section}{\numberline {5.1}A jelenetek felépítése}{29}{section.5.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.1.1}Zónák}{29}{subsection.5.1.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.1.2}Helyzet jellemzők}{30}{subsection.5.1.2}%
+\select@language {magyar} \contentsline {subsubsection}{Ingyen kihasználások helyzethez?}{30}{subsection.5.1.2}%
+\select@language {magyar} \contentsline {subsubsection}{Zóna jellemzők}{30}{subsection.5.1.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.1.3}Cselekvési sorrend}{31}{subsection.5.1.3}%
+\select@language {magyar} \contentsline {section}{\numberline {5.2}Csapatmunka}{32}{section.5.2}%
+\select@language {magyar} \contentsline {section}{\numberline {5.3}Kihívás}{32}{section.5.3}%
+\select@language {magyar} \contentsline {section}{\numberline {5.4}Versengés}{33}{section.5.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.4.1}Helyzetbehozás versengés során}{33}{subsection.5.4.1}%
+\select@language {magyar} \contentsline {section}{\numberline {5.5}Konfliktus}{34}{section.5.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.5.1}Sérülések elszenvedése}{34}{subsection.5.5.1}%
+\select@language {magyar} \contentsline {subsubsection}{Stressz}{35}{subsection.5.5.1}%
+\select@language {magyar} \contentsline {subsubsection}{Következmény jellemzők}{35}{subsection.5.5.1}%
+\select@language {magyar} \contentsline {subsubsection}{Kiejtés}{36}{subsection.5.5.1}%
+\select@language {magyar} \contentsline {subsubsection}{Megadás}{37}{subsection.5.5.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.5.2}Konfliktus befejezése}{38}{subsection.5.5.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.5.3}Sérülésekből felépülni}{38}{subsection.5.5.3}%
+\select@language {magyar} \contentsline {chapter}{\numberline {6}Fejlődés}{39}{chapter.6}%
+\select@language {magyar} \contentsline {section}{\numberline {6.1}Mérföldkövek}{39}{section.6.1}%
+\select@language {magyar} \contentsline {section}{\numberline {6.2}Áttörések}{39}{section.6.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.1}Képességek szintjének növelése}{40}{subsection.6.2.1}%
+\select@language {magyar} \contentsline {section}{\numberline {6.3}Játékülések és történetívek}{40}{section.6.3}%
+\select@language {magyar} \contentsline {chapter}{\numberline {7}Kaland Mesterek kézikönyve}{41}{chapter.7}%
+\select@language {magyar} \contentsline {section}{\numberline {7.1}Nehézség és ellenállás meghatározása}{42}{section.7.1}%
+\select@language {magyar} \contentsline {section}{\numberline {7.2}NJK‑k}{43}{section.7.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {7.2.1}Fontos NJK‑k}{43}{subsection.7.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {7.2.2}Kisebb NJK‑k}{43}{subsection.7.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {7.2.3}Szörnyek, főellenségek és más veszedelmek}{43}{subsection.7.2.3}%
+\select@language {magyar} \contentsline {section}{\numberline {7.3}A te sors pontjaid}{44}{section.7.3}%
+\select@language {magyar} \contentsline {section}{\numberline {7.4}Biztonsági technikák}{44}{section.7.4}%
+\select@language {magyar} \contentsline {chapter}{\numberline {8}Opcionális szabályok}{45}{chapter.8}%
+\select@language {magyar} \contentsline {section}{\numberline {8.1}Állapotok}{45}{section.8.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.1.1}Állapotok elszeparálása}{45}{subsection.8.1.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.1.2}Egyéb állapot szabály verziók}{45}{subsection.8.1.2}%
+\select@language {magyar} \contentsline {section}{\numberline {8.2}Képesség lista megváltoztatása}{46}{section.8.2}%
+\select@language {magyar} \contentsline {section}{\numberline {8.3}Karakterkészítés játék közben}{47}{section.8.3}%
+\select@language {magyar} \contentsline {section}{\numberline {8.4}Visszaszámlálás}{47}{section.8.4}%
+\select@language {magyar} \contentsline {section}{\numberline {8.5}Extrém következmények}{48}{section.8.5}%
+\select@language {magyar} \contentsline {section}{\numberline {8.6}Gyorsított versengés}{48}{section.8.6}%
+\select@language {magyar} \contentsline {section}{\numberline {8.7}Védekező harc}{48}{section.8.7}%
+\select@language {magyar} \contentsline {section}{\numberline {8.8}Akadályok}{49}{section.8.8}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.8.1}Veszély}{49}{subsection.8.8.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.8.2}Torlasz}{50}{subsection.8.8.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.8.3}Zavaró körülmény}{51}{subsection.8.8.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.8.4}Akadály példák}{51}{subsection.8.8.4}%
+\select@language {magyar} \contentsline {subsubsection}{Veszély}{51}{subsection.8.8.4}%
+\select@language {magyar} \contentsline {subsubsection}{Torlasz}{51}{subsection.8.8.4}%
+\select@language {magyar} \contentsline {subsubsection}{Zavaró körülmény}{51}{subsection.8.8.4}%
+\select@language {magyar} \contentsline {section}{\numberline {8.9}Méretarány}{52}{section.8.9}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.9.1}Jellemzők és méretarány}{53}{subsection.8.9.1}%
+\select@language {magyar} \contentsline {subsubsection}{Számít‑e a természetfeletti helyzetbehozás esetén?}{53}{subsection.8.9.1}%
+\select@language {magyar} \contentsline {section}{\numberline {8.10}Időtartamok}{53}{section.8.10}%
+\select@language {magyar} \contentsline {section}{\numberline {8.11}Szabálymódosítás főellenségekhez}{54}{section.8.11}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.11.1}Kihívás és versengés védettség}{54}{subsection.8.11.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.11.2}Feláldozható talpnyaló páncél}{54}{subsection.8.11.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.11.3}A végső alak felvétele}{55}{subsection.8.11.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.11.4}Növeld meg a méretarányt}{55}{subsection.8.11.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.11.5}Szóló bónusz}{55}{subsection.8.11.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {8.11.6}A veszély egy térkép (vagy karakterek hálója)}{56}{subsection.8.11.6}%
+\select@language {magyar} \contentsline {section}{\numberline {8.12}Több célpont kezelése}{57}{section.8.12}%
+\select@language {magyar} \contentsline {section}{\numberline {8.13}Fegyver és páncél szintek}{58}{section.8.13}%
+\contentsfinish 

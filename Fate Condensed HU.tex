@@ -23,6 +23,19 @@
     urlcolor=cyan,
 }
 
+\usepackage{titletoc}
+\contentsmargin{0pt}
+\titlecontents{chapter}[0pt]
+     {\bfseries}
+     {{\Huge\thecontentspage\quad}}{}{}
+\titlecontents{section}[0pt]
+     {\bfseries}
+     {{\large\thecontentspage\quad}}{}{}
+\titlecontents*{subsection}[0pt]
+     {\filright\small}{}{}{}
+     [;\quad][.]
+\setcounter{tocdepth}{2}
+
 \usepackage{titlesec}
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
@@ -69,8 +82,8 @@
 \newcommand{\successitem}{\item[\success]}
 \newcommand{\successwithstyleitem}{\item[\successwithstyle]}
 
-\newcommand\outcomesection[2]{\subsection{#1\vspace*{-12pt}\\ {\small#2}}}
-\newcommand\actionsection[2]{\subsection{#1\vspace*{-12pt}\\ {\small#2}}}
+\newcommand\outcomesection[2]{\subsection[#1]{#1\vspace*{-12pt}\\ {\small#2}}}
+\newcommand\actionsection[2]{\subsection[#1]{#1\vspace*{-12pt}\\ {\small#2}}}
 
 \newcommand{\fatetable}[2]{
 {\RobotoMedium
@@ -96,6 +109,12 @@
 \titlespacing{\subsection}{0pt}{0pt}{0pt}[0pt]
 \titleformat{\subsubsection}[hang]{}{}{0pt}{\RobotoCondensed\large\MakeUppercase}
 \titlespacing{\subsubsection}{0pt}{0pt}{0pt}[0pt]
+
+\include{Cover}
+
+\begin{multicols}{2}
+\tableofcontents
+\end{multicols}
 
 \include{Introduction}
 
