@@ -1,3 +1,4 @@
+\select@language {magyar} \thispagestyle {empty}
 \select@language {magyar} \contentsline {chapter}{\numberline {1}Bevezető}{3}{chapter.1}%
 \select@language {magyar} \contentsline {section}{\numberline {1.1}Mire van szükséged a játékhoz?}{3}{section.1.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {1.1.1}Veteránoknak: változások a Fate~Core"~hoz képest}{3}{subsection.1.1.1}%
@@ -5,7 +6,7 @@
 \select@language {magyar} \contentsline {section}{\numberline {2.1}A világ kidolgozása}{4}{section.2.1}%
 \select@language {magyar} \contentsline {section}{\numberline {2.2}Karakterkészítés}{4}{section.2.2}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}Ki vagy valójában?}{4}{subsection.2.2.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}Jellemzők}{4}{subsection.2.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}Jellemzők}{5}{subsection.2.2.2}%
 \select@language {magyar} \contentsline {subsubsection}{Koncepció jellemző (High Concept)}{5}{subsection.2.2.2}%
 \select@language {magyar} \contentsline {subsubsection}{Árnyoldal jellemző (Trouble)}{5}{subsection.2.2.2}%
 \select@language {magyar} \contentsline {subsubsection}{Kapcsolat jellemző (Relationship)}{5}{subsection.2.2.2}%
