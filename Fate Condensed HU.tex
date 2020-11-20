@@ -1,3 +1,4 @@
+% "openany" kell, különben minden fejezet páros lapon kezdődik.
 \documentclass[openany]{book}
 
 \usepackage[magyar]{babel}
@@ -23,7 +24,6 @@
 }
 
 \usepackage{titletoc}
-\renewcommand{\contentsname}{[Tartalomjegyzék]}
 \contentsmargin{0pt}
 \titlecontents{chapter}[0pt]
      {\bfseries}
@@ -42,6 +42,7 @@
 \usepackage{multicol}
 \usepackage{amsmath}
 \usepackage{lettrine}
+\usepackage[toc]{multitoc}
 
 \usepackage{fancyhdr}
 \fancyhf{}
@@ -52,6 +53,7 @@
 % Ez kell, különben a \chapter oldalakon (ami fixen plain-t használ) nem lesz header, csak oldalszám footer.
 \fancypagestyle{plain}{}
 
+% Ez a szürke csík a \example oldalán.
 \usepackage{mdframed}
 \newmdenv[
   linecolor=lightgray,
@@ -63,10 +65,12 @@
   skipbelow=\topsep
 ]{siderules}
 
+% Ez kikapcsolja a jelentős üres részeket a felsorolásokban és számozásokban.
 \usepackage{enumitem}
 \setlist[itemize]{parsep=0pt, topsep=0pt, itemsep=0pt}
 \setlist[enumerate]{parsep=0pt, topsep=0pt, itemsep=0pt}
 
+% Ezek kellenek, különben a font nem vált vissza a {} végén.
 \DeclareTextFontCommand{\dice}{\FateCoreGlyphs}
 \DeclareTextFontCommand{\examplefont}{\Roboto}
 \DeclareTextFontCommand{\outcome}{\Wingdings}
@@ -79,6 +83,7 @@
 \newcommand{\definition}[1]{\textbf{\textsc{#1}}}
 \newcommand{\example}[1]{\begin{siderules}\examplefont{#1}\end{siderules}}
 
+% Ez az átrajzolt dobókocka kép szöveg-sorba illesztésére kell.
 \newcommand{\vcenteredinclude}[1]{\begingroup\setbox0=\hbox{\includegraphics[height=12pt]{#1}}\parbox{\wd0}{\box0}\endgroup}
 
 % Ezek a számok itt nem UNICODE értékek, hanem a karakter sorszáma a karakterkészletben!!!
@@ -107,12 +112,13 @@
 }
 
 \renewcommand{\baselinestretch}{1.3}
+% Ne legyen oldalszám a tartalomjegyzék oldalán.
 \AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
 
 \begin{document}
 
 % A "\usepackage[magyar]{babel}" egy csomó mindent átállít a "\begin{document}" után, emiatt a "\titleformat" ide kell kerüljön!!!
-\titleformat{\chapter}[hang]{}{}{0pt}{\RobotoCondensed\Huge\MakeUppercase}
+\titleformat{\chapter}[hang]{}{}{0pt}{\RobotoCondensed\Huge\MakeUppercase}[\noindent]
 \titlespacing{\chapter}{0pt}{0pt}{0pt}[0pt]
 \titleformat{\section}[hang]{}{}{0pt}{\RobotoCondensed\huge}
 \titlespacing{\section}{0pt}{0pt}{0pt}[0pt]
@@ -125,18 +131,18 @@
 
 \include{Cover}
 
-\begin{multicols}{2}
 \tableofcontents
-\end{multicols}
 
 \setmainfont[Ligatures=TeX,Scale=1.4]{EB Garamond}
 
 \pagestyle{fancy}
+% Ez kikapcsolja, hogy a "...fejezet" szöveg benne legyen a header-ben.
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
 \include{Introduction}
 
 \include{GettingStarted}
+\include{Aspects}
 \include{Skills}
 \include{SkillList}
 \include{AlternativeSkillLists}
