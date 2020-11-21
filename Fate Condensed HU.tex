@@ -43,6 +43,7 @@
 \usepackage{amsmath}
 \usepackage{lettrine}
 \usepackage[toc]{multitoc}
+\usepackage{wrapfig}
 
 \usepackage{fancyhdr}
 \fancyhf{}
@@ -79,6 +80,7 @@
 \newcommand{\fate}[1]{\textbf{\textit{#1}}}
 \newcommand{\page}[1]{#1.~oldal}
 \newcommand{\onpage}[1]{#1.~oldalon}
+\newcommand{\pg}[1]{(#1.)}
 \newcommand{\aspect}[1]{\textsc{#1}}
 \newcommand{\definition}[1]{\textbf{\textsc{#1}}}
 \newcommand{\example}[1]{\begin{siderules}\examplefont{#1}\end{siderules}}
@@ -99,6 +101,8 @@
 \newcommand\outcomesection[2]{\subsection[#1]{#1\vspace*{-12pt}\\ {\small#2}}}
 \newcommand\actionsection[2]{\subsection[#1]{#1\vspace*{-12pt}\\ {\small#2}}}
 
+\newcommand\cheatsheetsection[1]{\colorbox{black}{\rlap{\textcolor{white}{\RobotoCondensed{\MakeUppercase{\textbf{#1}}}}}\hspace{\linewidth}}}
+
 \newcommand{\fatetable}[2]{
 {\RobotoMedium
 \rowcolors{2}{lightgray!40}{white}
@@ -118,7 +122,7 @@
 \begin{document}
 
 % A "\usepackage[magyar]{babel}" egy csomó mindent átállít a "\begin{document}" után, emiatt a "\titleformat" ide kell kerüljön!!!
-\titleformat{\chapter}[hang]{}{}{0pt}{\RobotoCondensed\Huge\MakeUppercase}[\noindent]
+\titleformat{\chapter}[hang]{}{}{0pt}{\RobotoCondensed\Huge\MakeUppercase}
 \titlespacing{\chapter}{0pt}{0pt}{0pt}[0pt]
 \titleformat{\section}[hang]{}{}{0pt}{\RobotoCondensed\huge}
 \titlespacing{\section}{0pt}{0pt}{0pt}[0pt]
@@ -186,5 +190,15 @@
 \include{WaysToBreakTheRulesForBigBads}
 \include{WaysToHandleMultipleTargets}
 \include{WeaponAndArmorRatings}
+
+\newpage
+
+\pagestyle{empty}
+
+\setmainfont[Ligatures=TeX,Scale=1.0]{EB Garamond}
+\renewcommand{\baselinestretch}{1.0}
+\setlength{\parindent}{0em}
+
+\include{CheatSheet}
 
 \end{document}
