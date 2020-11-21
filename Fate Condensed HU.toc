@@ -92,7 +92,7 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {7.2.1}Fontos NJK‑k}{43}{subsection.7.2.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {7.2.2}Kisebb NJK‑k}{43}{subsection.7.2.2}%
 \select@language {magyar} \contentsline {subsection}{\numberline {7.2.3}Szörnyek, főellenségek és más veszedelmek}{43}{subsection.7.2.3}%
-\select@language {magyar} \contentsline {section}{\numberline {7.3}A te sors pontjaid}{44}{section.7.3}%
+\select@language {magyar} \contentsline {section}{\numberline {7.3}A KM sors pontjai}{44}{section.7.3}%
 \select@language {magyar} \contentsline {section}{\numberline {7.4}Biztonsági technikák}{44}{section.7.4}%
 \select@language {magyar} \contentsline {chapter}{\numberline {8}Opcionális szabályok}{45}{chapter.8}%
 \select@language {magyar} \contentsline {section}{\numberline {8.1}Állapotok}{45}{section.8.1}%
