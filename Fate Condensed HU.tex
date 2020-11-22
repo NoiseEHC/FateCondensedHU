@@ -95,8 +95,19 @@
 \newcommand{\successitem}{\item[\success]}
 \newcommand{\successwithstyleitem}{\item[\successwithstyle]}
 
-\newcommand\outcomesection[2]{\subsection[#1]{#1\vspace*{-12pt}\\ {\small#2}}}
-\newcommand\actionsection[2]{\subsection[#1]{#1\vspace*{-12pt}\\ {\small#2}}}
+\newcommand\outcomesection[2]{\subsection[#1]{#1\vspace*{-18pt}\\{\small#2}}}
+
+\newcommand\actionsection[3]{
+{
+\setlength{\columnsep}{-14cm}
+\begin{multicols}{2}%
+{\noindent\fontsize{25pt}{0pt}\dice{#1}}
+\columnbreak
+\subsection[#2]{#2\vspace*{-18pt}\\{\small#3}}
+\end{multicols}
+\vspace*{-1em}
+}
+}
 
 \newcommand\cheatsheetsection[1]{\colorbox{black}{\rlap{\textcolor{white}{\RobotoCondensed{\MakeUppercase{\textbf{#1}}}}}\hspace{\linewidth}}}
 
