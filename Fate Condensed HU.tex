@@ -26,14 +26,11 @@
 \usepackage{titletoc}
 \contentsmargin{0pt}
 \titlecontents{chapter}[0pt]
-     {\bfseries}
-     {{\Huge\thecontentspage\quad}}{}{}
-\titlecontents{section}[0pt]
-     {\bfseries}
-     {{\large\thecontentspage\quad}}{}{}
-\titlecontents*{subsection}[0pt]
-     {\filright\small}{}{}{}
-     [;\quad][.]
+     {\RobotoCondensed\bfseries}{}{}{\titlerule*[0.7pc]{.}\thecontentspage}
+\titlecontents{section}[0.5em]
+     {}{}{}{\titlerule*[0.7pc]{.}\thecontentspage}
+\titlecontents*{subsection}[1em]
+     {\filright\small}{}{}{}[;\quad]
 \setcounter{tocdepth}{2}
 
 \usepackage{titlesec}
