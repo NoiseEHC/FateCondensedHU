@@ -75,9 +75,9 @@
 
 \newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
 \newcommand{\fate}[1]{\textbf{\textit{#1}}}
-\newcommand{\page}[1]{\pageref{#1}.~oldal}
-\newcommand{\onpage}[1]{\pageref{#1}.~oldalon}
-\newcommand{\pg}[1]{(#1.)}
+\newcommand{\page}[1]{\pageref*{#1}.~oldal}
+\newcommand{\onpage}[1]{\pageref*{#1}.~oldalon}
+\newcommand{\pg}[1]{(\pageref*{#1}.)}
 \newcommand{\aspect}[1]{\textsc{#1}}
 \newcommand{\definition}[1]{\textbf{\textsc{#1}}}
 \newcommand{\example}[1]{\begin{siderules}\examplefont{#1}\end{siderules}}
@@ -109,7 +109,8 @@
 }
 }
 
-\newcommand\cheatsheetsection[1]{\colorbox{black}{\rlap{\textcolor{white}{\RobotoCondensed{\MakeUppercase{\textbf{#1}}}}}\hspace{\linewidth}}}
+% Itt figyelni kell arra, hogy a \pg ne legyen \MakeUppercase-ben, mert akkor nem fogja megtalálni!!!
+\newcommand\cheatsheetsection[2]{\colorbox{black}{\rlap{\textcolor{white}{\RobotoCondensed{\MakeUppercase{\textbf{#1}} \pg{#2}}}}\hspace{\linewidth}}}
 
 \newcommand{\fatetable}[2]{
 {\RobotoMedium
