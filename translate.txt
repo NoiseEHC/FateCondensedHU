@@ -1,0 +1,110 @@
+Ez a fájl a fordított kifejezéseket tartalmazza. Ha van egy -> jel, az azt jelenti, 
+hogy mivel a fordított magyar kifejezést tilos a szövegben nem szakkifejezésként használni, 
+ezért az elfogadott szinonimák vannak felsorolva, amik viszont nem szakkifejezések.
+
+fate condensed: fate condensed
+Aspect: jellemző
+High Concept: koncepció (jellemző)
+Trouble: árnyoldal (jellemző)
+Relationship: kapcsolat (jellemző)
+Fate Point: sors pont
+Skill: képesség -> tud, adottság
+skill rating: képesség szint
+Academics: tudomány
+Athletics: atléta
+Burglary: tolvajlás
+Contacts: kapcsolatok -> ismeretség, kötelék, kontaktus, viszony
+Crafts: ezermester
+Deceive: megtévesztés
+Drive: vezetés
+Empathy: empátia
+Fight: közelharc
+Investigate: nyomozás
+Lore: misztikum
+Notice: észlelés
+Physique: fizikum
+Provoke: kényszerítés -> késztet (egyszer használt "hátrálásra késztette")
+Rapport: befolyásolás
+Resources: vagyon
+Shoot: célzás
+Stealth: lopózás
+Will: akaraterő
++8 Legendary: legendás
++7 Epic: eposzi
++6 Fantastic: fantasztikus
++5 Superb: emberfeletti -> gigászi
++4 Great: kimagasló
++3 Good: remek
++2 Fair: jó
++1 Average: átlagos
++0 Mediocre: középszerű
+-1 Poor: gyenge
+-2 Terrible: borzalmas
+-3 Catastrophic: katasztofális
+-4 Horrifying: horrorisztikus
+Stunt: fortély
+Refresh: újratöltés
+Outcome: kimenetel
+Action: cselekvés -> cselekedet, tett, cselekszik
+Overcome: megoldás -> kezelendő
+Create Advantage: helyzetbehozás
+Attack: megtámadás -> támadás
+Defend: védekezés
+Challenge: kihívás
+Contest: versengés
+Conflict: konfliktus
+Stress: stressz
+Stress Box: stressz doboz
+Stress Track: stresszmérő
+Consequence: következmény (jellemző) -> eredmény
+Take out: kiejt
+Taken out: kiejtődött
+Concede: megadás
+Character Aspect: karakter jellemző
+Situation Aspect: helyzet (jellemző) -> szituáció, körülmény
+Boost: előny (jellemző) -> fölény
+Invoking Aspects: (jellemző) kihasználás -> felhasználás
+Free Invocations: ingyen kihasználás -> ingyenes, nincs költsége, fizetés nélkül
+Hostile Invocations: ellenséges kihasználás
+Compelling Aspects: (jellemző) késztetés
+Establishing Facts: tények kinyilvánítása
+declare: kinyilvánít -> kijelent
+Effort: erőfeszítés -> fáradozás
+Milestone: mérföldkő
+Campaign: kampány
+Scenario: kaland
+Game Session: játékülés
+Mooks/Minions: talpnyalók
+bogus rule: fals szabály
+full defense: védekező harc
+physical stress: fizikai stressz -> testi
+mental stress: szellemi stressz -> mentális
+difficulty: (passzív) nehézség -> kényelmetlenség
+opposition: (aktív) ellenállás -> szembeszegül
+niche (protection): szakterület
+failure: kudarc -> sikertelen, tévedés, hiba, balsiker
+success: siker -> tud, eredményes
+success with style: átütő siker
+cultist: szektatag
+zone: zóna
+exhange: ütésváltás
+acolyte: főpap (tudom, hogy nem ezt jelenti, de csak egy példában használt...)
+victory: diadal (in contest) -> győzelem
+Shifts: sikeresség
+turn: ő jön/nem ő jön
+turn order: cselekvési sorrend
+exchange: forduló
+eldritch: hátborzongató, szörnyű, mágikus
+absorb: semlegesít
+story: történet -> megesik (ha a történetben történik)
+fiction first: előbb az elképzelés
+action: akció, cselekmény
+plot: cselekmény
+Big Bad: főellenség
+fate point pool: sors pont tartalék
+mild/moderate/severe consequence: enyhe/mérsékelt/súlyos következmény
+teamwork: csapatmunka
+hazard: veszély
+block: torlasz
+distraction: zavaró körülmény
+scale: méretarány
