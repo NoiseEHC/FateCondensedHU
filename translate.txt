@@ -29,19 +29,19 @@ Resources: vagyon
 Shoot: célzás
 Stealth: lopózás
 Will: akaraterő
-+8 Legendary: legendás
-+7 Epic: eposzi
-+6 Fantastic: fantasztikus
-+5 Superb: emberfeletti -> gigászi
-+4 Great: kimagasló
-+3 Good: remek
-+2 Fair: jó
-+1 Average: átlagos
-+0 Mediocre: középszerű
--1 Poor: gyenge
--2 Terrible: borzalmas
--3 Catastrophic: katasztofális
--4 Horrifying: horrorisztikus
++8 Legendary: Legendás~(+8)
++7 Epic: Eposzi~(+7)
++6 Fantastic: Fantasztikus~(+6)
++5 Superb: Emberfeletti~(+5) -> gigászi
++4 Great: Kimagasló~(+4)
++3 Good: Remek~(+3)
++2 Fair: Jó~(+2)
++1 Average: Átlagos~(+1)
++0 Mediocre: Középszerű~(+0)
+-1 Poor: Gyenge~(-1)
+-2 Terrible: Borzalmas~(-2)
+-3 Catastrophic: Katasztrofális~(-3)
+-4 Horrifying: Horrorisztikus~(-4)
 Stunt: fortély
 Refresh: újratöltés
 Outcome: kimenetel

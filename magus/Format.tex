@@ -1,0 +1,21 @@
+\newmdenv[
+  linecolor=lightgray,
+  linewidth=3pt,
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  skipabove=0pt,
+  skipbelow=0pt
+]{siderulesnoskip}
+
+\newcommand{\overcome}{\lettrine[lines=2]{\raisebox{7pt}{\dice{O}}}{} \textbf{Megoldás:} }
+\newcommand{\advantage}{\lettrine[lines=2]{\raisebox{7pt}{\dice{C}}}{} \textbf{Helyzetbehozás:} }
+\newcommand{\attack}{\lettrine[lines=2]{\raisebox{7pt}{\dice{A}}}{} \textbf{Megtámadás:} }
+\newcommand{\defend}{\lettrine[lines=2]{\raisebox{7pt}{\dice{D}}}{} \textbf{Védekezés:} }
+\newcommand{\noattack}{\noindent Ez a képesség a megfelelő fortély nélkül nem alkalmas \dice{A} megtámadásra.}
+\newcommand{\noattackatall}{\noindent Ez a képesség nem alkalmas \dice{A} megtámadásra.}
+
+\newcommand{\stunt}[3]{\subsubsection{#1}#2\begin{siderulesnoskip}\examplefont{#3}\end{siderulesnoskip}}
+
+\newcommand{\engskill}[2]{\label{#1}\subsection[#1]{#1 (#2)}}
+\newcommand{\hunskill}[2]{\label{#1}\subsection[#1]{#1}}
