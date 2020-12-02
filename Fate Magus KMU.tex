@@ -1,0 +1,38 @@
+\input{Format1}
+
+\begin{document}
+
+% A "\usepackage[magyar]{babel}" egy csomó mindent átállít a "\begin{document}" után, emiatt a "\titleformat" ide kell kerüljön!!!
+\input{Format2}
+
+\pagestyle{empty}
+
+%\input{condensed/Cover}
+\clearpage
+
+\setmainfont[Ligatures=TeX,Scale=1.4]{EB Garamond}
+
+\tableofcontents
+
+\pagestyle{fancy}
+% Ez kikapcsolja, hogy a "...fejezet" szöveg benne legyen a header-ben ("\pagestyle{fancy}" után kell).
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\setmainfont[Ligatures=TeX,Scale=1.4]{EB Garamond}
+
+\input{condensed/BeingTheGameMaster}
+\clearpage
+\input{condensed/SettingDifficultyAndOpposition}
+\clearpage
+\input{condensed/NPCs}
+\clearpage
+\input{condensed/YourFatePoints}
+\clearpage
+
+\input{condensed/OptionalRules}
+\input{condensed/Scale}
+\clearpage
+\input{condensed/Obstacles}
+\clearpage
+\input{condensed/WaysToBreakTheRulesForBigBads}
+
+\end{document}
