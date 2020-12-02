@@ -12,8 +12,9 @@
 \newcommand{\advantage}{\lettrine[lines=2]{\raisebox{7pt}{\dice{C}}}{} \textbf{Helyzetbehozás:} }
 \newcommand{\attack}{\lettrine[lines=2]{\raisebox{7pt}{\dice{A}}}{} \textbf{Megtámadás:} }
 \newcommand{\defend}{\lettrine[lines=2]{\raisebox{7pt}{\dice{D}}}{} \textbf{Védekezés:} }
-\newcommand{\noattack}{\noindent \dice{A} Ez a képesség a megfelelő fortély nélkül nem alkalmas megtámadásra.}
-\newcommand{\noattackatall}{\noindent \dice{A} Ez a képesség nem alkalmas megtámadásra.}
+\newcommand{\noattackparam}[1]{\noindent \dice{A} #1}
+\newcommand{\noattack}{\noattackparam{Ez a képesség a megfelelő fortély nélkül nem alkalmas megtámadásra.}}
+\newcommand{\noattackatall}{\noattackparam{Ez a képesség nem alkalmas megtámadásra.}}
 
 \newcommand{\stunt}[3]{\subsubsection{#1}#2\begin{siderulesnoskip}\examplefont{#3}\end{siderulesnoskip}}
 
