@@ -21,9 +21,13 @@
 \newcommand{\nodefendatall}{\noattackparam{Ez a képesség nem alkalmas védekezésre.}}
 \newcommand{\magic}{\lettrine[lines=2]{\raisebox{4pt}{\includegraphics[scale=0.05]{magus/magic-wand.eps}}\hspace{4pt}}{} \textbf{Mágia:} }
 
-\newcommand{\stunt}[3]{\subsubsection{#1}#2\begin{siderulesnoskip}\examplefont{#3}\end{siderulesnoskip}}
+\newcommand{\stunt}[3]{\subsubsection{#1}#2\stunttext{#3}}
+\newcommand{\stunttext}[1]{\begin{siderulesnoskip}\examplefont{#1}\end{siderulesnoskip}}
 
 \newcommand{\engskill}[2]{\label{#1}\subsection[#1]{#1 (#2)}}
 \newcommand{\hunskill}[1]{\label{#1}\subsection[#1]{#1}}
 
 \newcommand{\etk}[1]{(ETK #1. oldal)}
+
+\newcommand{\todo}[1]{\fcolorbox{red}{yellow}{TODO: #1}}
+\newcommand{\stuntref}[1]{\textsc{\emph{#1}}}
